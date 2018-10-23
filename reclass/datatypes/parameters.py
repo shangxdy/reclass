@@ -272,5 +272,7 @@ class Parameters(object):
             # finally, remove the reference from the occurrences cache
             del self._occurrences[path]
         except UndefinedVariableError as e:
+            print("Path:" + path )
+            print("Refvalue:" + refvalue )
             raise UndefinedVariableError(e.var, path)
 
